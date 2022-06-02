@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+    app:
+        container_name: nginx_as_file_store
+        image: nginx_as_file_store
+        build:
+            context: .
+            dockerfile: Dockerfile
+        restart: always
+        ports:
+            - "8090:8080"
